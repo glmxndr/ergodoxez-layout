@@ -1,4 +1,5 @@
 #include "ergodox_ez.h"
+#include "quantum.h"
 #include "debug.h"
 #include "action_layer.h"
 #include "version.h"
@@ -159,11 +160,16 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt)
     return MACRO_NONE;
 };
 
-void matrix_init_user(void) {
-#ifdef RGBLIGHT_COLOR_LAYER_0
-  rgblight_setrgb(RGBLIGHT_COLOR_LAYER_0);
+void matrix_init_user(void) { // Runs boot tasks for keyboard
+#ifdef RGBLIGHT_ENABLE
+    //set the layer color at initalization, because it won't set otherwise
+    rgblight_enable();
+    rgblight_mode(1);
+    #ifdef RGBLIGHT_COLOR_LAYER_0
+    rgblight_setrgb(RGBLIGHT_COLOR_LAYER_0);
+    #endif
 #endif
-};
+}
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
@@ -249,7 +255,7 @@ uint32_t layer_state_set_user(uint32_t state) {
         ergodox_right_led_2_on();
         ergodox_right_led_3_on();
         #ifdef RGBLIGHT_COLOR_LAYER_7
-          rgblight_setrgb(RGBLIGHT_COLOR_LAYER_6);
+          rgblight_setrgb(RGBLIGHT_COLOR_LAYER_7);
         #endif
         break;
       default:

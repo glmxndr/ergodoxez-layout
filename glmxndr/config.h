@@ -13,6 +13,20 @@
 
 
 #undef PRODUCT
-#define PRODUCT         DrashnaDox - Hacked ErgoDox EZ Shine
+#define PRODUCT         glmxndr - Hacked ErgoDox EZ Shine
 
 #endif
+
+
+#define PERMISSIVE_HOLD
+#undef  MOUSEKEY_MAX_SPEED
+#define MOUSEKEY_MAX_SPEED 5
+#undef  MOUSEKEY_TIME_TO_MAX
+#define MOUSEKEY_TIME_TO_MAX 100
+
+#define RGBLIGHT_COLOR_LAYER_0 0xFF,0xFF,0xFF
+#define RGBLIGHT_COLOR_LAYER_1 0xFF,0xFF,0x00
+#define RGBLIGHT_COLOR_LAYER_2 0xFF,0x00,0xFF
+#define RGBLIGHT_COLOR_LAYER_3 0x00,0xFF,0xFF
+#define RGBLIGHT_COLOR_LAYER_4 0xFF,0x00,0x00
+
