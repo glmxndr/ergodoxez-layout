@@ -27,23 +27,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESCAPE,  /**/  KC_Y,         /**/  KC_H,         /**/  KC_G,         /**/  KC_F,         /**/  KC_D,        /**/  LCTL(KC_LEFT),        
     KC_TAB,     /**/  SFT_T(KC_U),  /**/  CTL_T(KC_O),  /**/  GUI_T(KC_I),  /**/  ALT_T(KC_E),  /**/  KC_A,        /**/                        
     KC_LSHIFT,  /**/  KC_Z,         /**/  KC_X,         /**/  KC_C,         /**/  KC_V,         /**/  LT(4, KC_B), /**/  LCTL(LSFT(KC_LEFT)),  
-    KC_EQUAL,   /**/  KC_GRAVE,     /**/  TT(3),        /**/  TT(2),        /**/  TT(1),        /**/
+    KC_EQUAL,   /**/  KC_GRAVE,     /**/  TT(3),        /**/  TT(3),        /**/  TT(2),        /**/
 
 
                   /**/  KC_ESCAPE,  /**/  KC_LGUI,
                   /**/              /**/  KC_LALT,
-        KC_SPACE, /**/  KC_BSPACE,  /**/  KC_LCTL,
+        KC_SPACE, /**/  TT(1),      /**/  KC_LCTL,
 
 
-        KC_BSLASH,             /**/  KC_6,            /**/  KC_7,           /**/  KC_8,        /**/  KC_9,        /**/  KC_0,             /**/  KC_MINUS,  
-        LCTL(KC_RIGHT),        /**/  KC_L,            /**/  KC_M,           /**/  KC_N,        /**/  KC_P,        /**/  KC_Q,             /**/  KC_BSPACE, 
-                               /**/  KC_R,            /**/  ALT_T(KC_S),    /**/  GUI_T(KC_T), /**/  CTL_T(KC_W), /**/  SFT_T(KC_SCOLON), /**/  KC_ENTER,  
-        LCTL(LSFT(KC_RIGHT)),  /**/  KC_J,            /**/  KC_K,           /**/  KC_COMMA,    /**/  KC_DOT,      /**/  KC_QUOTE,         /**/  KC_RSHIFT, 
-                                                            LT(4, KC_LEFT), /**/  KC_RIGHT,    /**/  _____,       /**/  _____,            /**/  KC_INSERT, 
+        KC_BSLASH,             /**/  KC_6,        /**/  KC_7,           /**/  KC_8,        /**/  KC_9,        /**/  KC_0,             /**/  KC_MINUS,  
+        LCTL(KC_RIGHT),        /**/  KC_L,        /**/  KC_M,           /**/  KC_N,        /**/  KC_P,        /**/  KC_Q,             /**/  KC_BSPACE, 
+                               /**/  KC_R,        /**/  ALT_T(KC_S),    /**/  GUI_T(KC_T), /**/  CTL_T(KC_W), /**/  SFT_T(KC_SCOLON), /**/  KC_ENTER,  
+        LCTL(LSFT(KC_RIGHT)),  /**/  LT(5, KC_J), /**/  KC_K,           /**/  KC_COMMA,    /**/  KC_DOT,      /**/  KC_QUOTE,         /**/  KC_RSHIFT, 
+                                                        LT(4, KC_LEFT), /**/  KC_RIGHT,    /**/  _____,       /**/  _____,            /**/  KC_INSERT, 
 
                       /**/  KC_APPLICATION, /**/ KC_DELETE,
             KC_RALT,  /**/                  /**/
-            KC_RCTRL, /**/  KC_TAB,         /**/ KC_ENTER
+            KC_RCTRL, /**/  TT(4),         /**/ KC_ENTER
   ),
 
   [1] = KEYMAP(
@@ -52,18 +52,18 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESCAPE,   /**/ KC_GRAVE, /**/ KC_DLR,  /**/ KC_PIPE, /**/ KC_QUES,  /**/ KC_EXLM,         /**/ KC_TILD,
     KC_TAB,      /**/ KC_CIRC,  /**/ KC_UNDS, /**/ KC_DQUO, /**/ KC_QUOTE, /**/ KC_COMMA,        /**/
     KC_LSHIFT,   /**/ KC_HASH,  /**/ KC_AMPR, /**/ KC_ASTR, /**/ KC_PLUS,  /**/ LT(4, KC_MINUS), /**/ ALL_T(KC_NO),
-    KC_CAPSLOCK, /**/ KC_PAUSE, /**/ _____,   /**/ TT(2),   /**/ TO(0),    /**/
+    KC_CAPSLOCK, /**/ KC_PAUSE, /**/ _____,   /**/ _____,   /**/ TO(0),    /**/
 
                _____, _____,
                       _____,
         _____, _____, _____,
 
 
-        KC_CAPSLOCK,  /**/ KC_F6,     /**/ KC_F7,       /**/ KC_F8,       /**/ KC_F9,    /**/ KC_F10,     /**/ KC_F11,    
-        KC_PERC,      /**/ KC_SCOLON, /**/ KC_LCBR,     /**/ KC_RCBR,     /**/ KC_LABK,  /**/ KC_RABK,    /**/ KC_F12,    
-                      /**/ KC_DOT,    /**/ KC_LPRN,     /**/ KC_RPRN,     /**/ KC_SLASH, /**/ KC_BSLASH,  /**/ KC_ENTER,  
-        MEH_T(KC_NO), /**/ KC_COLN,   /**/ KC_LBRACKET, /**/ KC_RBRACKET, /**/ KC_AT,    /**/ KC_EQUAL,   /**/ KC_RSHIFT, 
-                                           _____,       /**/ _____,       /**/ _____,    /**/ KC_PSCREEN, /**/ KC_INSERT, 
+        KC_CAPSLOCK,  /**/ KC_F6,           /**/ KC_F7,       /**/ KC_F8,       /**/ KC_F9,    /**/ KC_F10,     /**/ KC_F11,    
+        KC_PERC,      /**/ KC_SCOLON,       /**/ KC_LCBR,     /**/ KC_RCBR,     /**/ KC_LABK,  /**/ KC_RABK,    /**/ KC_F12,    
+                      /**/ KC_DOT,          /**/ KC_LPRN,     /**/ KC_RPRN,     /**/ KC_SLASH, /**/ KC_BSLASH,  /**/ KC_ENTER,  
+        MEH_T(KC_NO), /**/ LT(5, KC_COLN),  /**/ KC_LBRACKET, /**/ KC_RBRACKET, /**/ KC_AT,    /**/ KC_EQUAL,   /**/ KC_RSHIFT, 
+                                                 _____,       /**/ _____,       /**/ _____,    /**/ KC_PSCREEN, /**/ KC_INSERT, 
 
             _____, _____,
             _____,
@@ -107,11 +107,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         _____,_____,_____,
 
 
-        _____, /**/ _____, /**/ _____,       /**/ _____,       /**/ _____,       /**/ _____,       /**/ _____, 
-        _____, /**/ KC_F6, /**/ KC_F7,       /**/ KC_F8,       /**/ KC_F9,       /**/ KC_F10,      /**/ KC_F11, 
-               /**/ KC_6,  /**/ ALT_T(KC_7), /**/ GUI_T(KC_8), /**/ CTL_T(KC_9), /**/ SFT_T(KC_0), /**/ KC_F12, 
-        _____, /**/ KC_1,  /**/ KC_2,        /**/ KC_3,        /**/ KC_4,        /**/ KC_5,        /**/ _____, 
-                                _____,       /**/ _____,       /**/ _____,       /**/ _____,       /**/ _____, 
+        _____, /**/ _____,       /**/ _____,       /**/ _____,       /**/ _____,       /**/ _____,       /**/ _____, 
+        _____, /**/ KC_F6,       /**/ KC_F7,       /**/ KC_F8,       /**/ KC_F9,       /**/ KC_F10,      /**/ KC_F11, 
+               /**/ KC_6,        /**/ ALT_T(KC_7), /**/ GUI_T(KC_8), /**/ CTL_T(KC_9), /**/ SFT_T(KC_0), /**/ KC_F12, 
+        _____, /**/ LT(5, KC_1), /**/ KC_2,        /**/ KC_3,        /**/ KC_4,        /**/ KC_5,        /**/ _____, 
+                                      _____,       /**/ _____,       /**/ _____,       /**/ _____,       /**/ _____, 
 
                     _____,_____,
                     _____,
@@ -136,6 +136,30 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                /**/ KC_HOME, /**/ KC_LEFT,   /**/ KC_DOWN, /**/ KC_RIGHT, /**/ KC_END, /**/ _____, 
         _____, /**/ _____,   /**/ KC_PGDOWN, /**/ _____,   /**/ _____,    /**/ _____,  /**/ _____, 
                                   _____,     /**/ _____,   /**/ _____,    /**/ _____,  /**/ _____, 
+
+                    _____,_____,
+                    _____,
+                    _____,_____,_____
+  ),
+
+  [5] = KEYMAP(
+
+    _____, /**/ _____, /**/ _____,      /**/ _____,      /**/ _____,      /**/ _____, /**/ _____, 
+    _____, /**/ _____, /**/ _____,      /**/ _____,      /**/ _____,      /**/ _____, /**/ _____, 
+    _____, /**/ _____, /**/ LCTL(KC_X), /**/ LCTL(KC_C), /**/ LCTL(KC_V), /**/ _____, /**/ 
+    _____, /**/ _____, /**/ _____,      /**/ _____,      /**/ _____,      /**/ _____, /**/ _____, 
+    _____, /**/ _____, /**/ _____,      /**/ _____,      /**/ _____,      /**/ 
+
+              _____,_____,
+                    _____,
+        _____,_____,_____,
+
+
+        _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, 
+        _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, 
+               /**/ _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, 
+        _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, 
+                                _____, /**/ _____, /**/ _____, /**/ _____, /**/ _____, 
 
                     _____,_____,
                     _____,
