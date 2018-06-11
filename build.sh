@@ -3,6 +3,16 @@ KEYBOARD=ergodox_ez
 KEYMAP=glmxndr
 QMK_DIR=qmk_firmware
 
+function runqmk() {
+  docker container run \
+    --rm \
+    --env keybord=$KEYBOARD \
+    --env keymap=$KEYMAP \
+    --volume "$(pwd)":/qmk \
+    edasque/qmk_firmware \
+    $*
+}
+
 # 0. Clean
 rm -rf .build
 
@@ -15,13 +25,13 @@ cp -r $KEYMAP $QMK_DIR/keyboards/$KEYBOARD/keymaps/
 
 # 3. Make clean
 cd $QMK_DIR
-make $KEYBOARD:$KEYMAP:clean
+runqmk make $KEYBOARD:$KEYMAP:clean
 
 # 4. Make teensy build
-make $KEYBOARD:$KEYMAP
+runqmk make $KEYBOARD:$KEYMAP
 
 # 5. Clean up
 cp -r .build ../.build
-git clean -f -d
-git checkout -- .
+#git clean -f -d
+#git checkout -- .
 
